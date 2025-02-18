@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial Cubo de Rubik</title>
+    <style>
+        
+        body {
+    background-image:url(fondo4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+       
+       /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        /* Contenedor principal */
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Botones */
+        .boton2 {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 12px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+            background-color: #ff9100; /* Azul claro */
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s;
+        }
+
+       
+       
+       
+       
+       
+        /* Botones */
+        .boton {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 12px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+            background-color: #4da3ff; /* Azul claro */
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s;
+        }
+
+        .boton:hover {
+            background-color: #1e88e5; /* Azul más intenso al pasar el mouse */
+            transform: scale(1.05);
+        }
+
+        /* Secciones ocultas por defecto */
+        .seccion {
+            display: none;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        /* Botón de volver al inicio */
+        #volver {
+            background-color: #ff7043; /* Naranja */
+        }
+
+        #volver:hover {
+            background-color: #e64a19; /* Naranja más oscuro */
+        }
+
+        /* Sección de comentarios */
+        #comentarios {
+            display: none;
+            margin-top: 20px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        #lista-comentarios {
+            text-align: left;
+            margin-top: 20px;
+            background: #f9f9f9;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="resolution">
+        <div class="desktope"></div>
+        <div class="tablet"></div>
+        <div class="movil"></div>
+    </div>
+   
+   <div class="container">
+        <h1>Tutorial: Cómo Resolver el Cubo de Rubik</h1>
+
+        <!-- Menú de pasos -->
+        <div id="menu">
+            <button class="boton" onclick="mostrarPaso(1)">Paso 1</button>
+            <button class="boton" onclick="mostrarPaso(2)">Paso 2</button>
+            <button class="boton" onclick="mostrarPaso(3)">Paso 3</button>
+            <button class="boton" onclick="mostrarPaso(4)">Paso 4</button>
+            <button class="boton" onclick="mostrarPaso(5)">Paso 5</button>
+            <button class="boton" onclick="mostrarPaso(6)">Paso 6</button>
+            <button class="boton" onclick="mostrarPaso(7)">Paso 7</button>
+            <button class="boton2" onclick="mostrarComentarios()">Comentarios</button>
+        </div>
+
+        <!-- Contenido de cada paso -->
+        <div id="paso1" class="seccion">🔹 Paso 1: <br> <h2><span style="color:crimson">1º</span> paso hacer la cruz</h2>
+            <p class="texto">En este caso os voy a enseñar como hacer el cubo desde la cara blanca.
+               
+                Para hacer la cruz blanca, lo primero que hay que ver es que las aristas del cubo como podeis ver tiene dos colores, 
+               entonces teneis que cuadrar en este caso la parte de la arista que tiene el color blanco con el centro de color blanco. Tenes que
+               fijaros que otros colores tienen las aristas, esos colores son: (rojo,naranja,azul,verde).
+               
+               Teneis que cuadrarlo como en la imagen que hay a continuación. 
+            </p>
+           <img src="cuboAristas.jpg" alt="foto cubo Aristas" style="height: 400;">
+           <hr></div>
+        <div id="paso2" class="seccion">🔹 Paso 2: <br> <h2><span style="color:crimson">2º</span> completar la cruz con las esquinas</h2>
+            <p class="texto">"Siguiendo en la cara blanca". Tenemos que colocar las esquinas, 
+               como en el paso anterior cuadrando los colores, en este caso las esquinas tienen 3 colores,
+               entonces hay que cuadrar los tres colores de las esquinas. En las que os teneis que fija son en:</p>
+               <p class="texto">1º (esquina de color blanco,verde y rojo)</p>
+               <p class="texto">2º (esquina blanca, roja y azul).</p>
+               <p class="texto">3º (esquina de color blanco, azul y naranja).</p> 
+               <p class="texto">4º (esquina de color blanco, naranja y verde).</p>
+               <p class="texto">Os tiene que quedar como en la imagen siguiente.</p>
+               <img src="cuboesquinascarablanca.jpg" alt="foto cubo Esquinas" style="height: 400;"> <hr></div>
+        
+        
+       <div id="paso3" class="seccion">🔹 Paso 3: <br> <h2><span style="color:crimson">3º</span> Realizar la segunda capa</h2>
+            <p class="texto">Los dos pasos que hemos hecho anteriormente servian para completar la primera capa del cubo,
+                en las segunda capa solo necesitaremos un paso, pero sera un poco mas complicada, por que aquí ya empezaremos con patrones.</p>
+                <p class="texto">En este paso lo prinmero que tenemos que hacer sera buscar las aristas que no contengan amarillo,
+                  a continuación os dejare un video par que veais los movimentos que teneis que Realizar</p>
+                  
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/GyY0OxDk5lI?si=vZ1s2AwQMjEEwmgD&amp;start=962" title="YouTube video player" 
+                  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><hr></div>
+       
+       
+           <div id="paso4" class="seccion">🔹 Paso 4: <br>  <h2><span style="color:crimson">4º</span> La cruz amarilla</h2>
+            <p class="texto">En este paso mediante un codigo pondremos la cruz amarilla, cuando realizemo el codigo nos daremos cuenta que 
+                la cruz amarilla estara hecha pero no estaran o al menos no todas las aristas cuadradas con los otros centros,puede suceder el caso en el que 
+                si estencuadras con los otros centros, pero no es lo abitual.</p>
+                <p class="texto">Aqui abajo estar como hacerlo paso a paso, y todas las opciones que os puedan salir, 
+                    el video esta pare que lo veais hasta que os salga a la primera.</p>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/GyY0OxDk5lI?si=YkeuyXDmviPONYCy&amp;start=1359" title="YouTube video player" 
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><hr></div>
+       
+       
+             <div id="paso5" class="seccion">🔹 Paso 5: <br>  <h2><span style="color:crimson">5º</span> Colocar la cruz amarilla</h2>
+            <p class="texto">El paso anterior y este estan conectados, aparte de formar parte de la ultima capa, en este paso tendremos que colocar bien las aristas amarillas en su sitio,
+                 porque ahora simplemente estan orientadas hacia arriba.</p>
+                 <p class="texto">Para que os sea mas facil teneis un video abajo que lo podreis repetir las veces que os haga falta.</p>
+                 <iframe width="560" height="315" src="https://www.youtube.com/embed/GyY0OxDk5lI?si=2agxjsmqcfmC8v1m&amp;start=1621" 
+                 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><hr></div>
+       
+       
+          <div id="paso6" class="seccion">🔹 Paso 6: <br>  <h2><span style="color:crimson">6º</span> Colocar las esquinas amarillas</h2>
+            <p class="texto">Ya casi vamos llegando al final, en este penultimo paso lo que vamos a hacer es 
+                colocar pero no orientar nuestras esquinas de nuestra cara amarilla.</p>
+                <p class="texto">Para ello os dejo un video como los anteriores, para que lo resolvais, practiqueis.</p>
+        
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/GyY0OxDk5lI?si=FRsdNWt-yIb93RhE&amp;start=1850" title="YouTube video player" 
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><hr>
+                </div>
+       
+       
+         <div id="paso7" class="seccion">🔹 Paso 7: <br> <h2><span style="color:crimson">7º</span> Orientar las esquinas amarillas</h2>
+            <p class="texto">Hemos llegado al ultimo paso, tendremos que orientar nuestras esquinas anteriormente colocadas,
+                 este proceso que os voy a enseñar a continuación con un video lo podeis hacer de diferentes formas, pero en el video aparce en mi opinion la forma mas facil.</p>
+        
+                 <iframe width="560" height="315" src="https://www.youtube.com/embed/GyY0OxDk5lI?si=7AX2ssuDq1x_QENt&amp;start=2047" 
+                 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                 <hr>
+                </div>
+
+        
+        <!-- Sección de comentarios -->
+        <div id="comentarios" class="seccion">
+            <h2>Deja tu comentario</h2>
+            <form id="form-comentario" action="https://formspree.io/f/xyzknqjv" method="POST">
+            <textarea name="mensaje" id="comentario-texto" placeholder="Escribe tu comentario aquí..." required></textarea>
+            <input type="email" name="email" placeholder="Tu correo (opcional)" />
+            <button class="boton" type="submit">Enviar Comentario</button>
+        </form>
+    
+        <h3>Comentarios:</h3>
+        <div id="lista-comentarios"></div>
+        </div>
+
+        <!-- Botón para volver al inicio -->
+        <button id="volver" class="boton" onclick="volverInicio()">Volver al Inicio</button>
+    </div>
+
+    <script>
+        function mostrarPaso(n) {
+            // Oculta el menú y muestra el contenido del paso seleccionado
+            document.getElementById('menu').style.display = 'none';
+            document.getElementById('volver').style.display = 'block';
+
+            // Oculta todos los pasos y la sección de comentarios
+            let secciones = document.getElementsByClassName('seccion');
+            for (let seccion of secciones) {
+                seccion.style.display = 'none';
+            }
+
+            // Muestra el paso seleccionado
+            document.getElementById('paso' + n).style.display = 'block';
+        }
+
+        function volverInicio() {
+            // Muestra el menú de botones
+            document.getElementById('menu').style.display = 'block';
+            document.getElementById('volver').style.display = 'none';
+
+            // Oculta todas las secciones
+            let secciones = document.getElementsByClassName('seccion');
+            for (let seccion of secciones) {
+                seccion.style.display = 'none';
+            }
+        }
+
+        function mostrarComentarios() {
+            // Oculta el menú y muestra la sección de comentarios
+            document.getElementById('menu').style.display = 'none';
+            document.getElementById('volver').style.display = 'block';
+
+            let secciones = document.getElementsByClassName('seccion');
+            for (let seccion of secciones) {
+                seccion.style.display = 'none';
+            }
+
+            document.getElementById('comentarios').style.display = 'block';
+        }
+
+        function agregarComentario() {
+            let textoComentario = document.getElementById('comentario-texto').value;
+            if (textoComentario.trim() === "") {
+                alert("Por favor, escribe un comentario.");
+                return;
+            }
+
+            let nuevoComentario = document.createElement("p");
+            nuevoComentario.textContent = "🗨️ " + textoComentario;
+
+            document.getElementById('lista-comentarios').appendChild(nuevoComentario);
+
+            document.getElementById('comentario-texto').value = ""; // Limpiar el campo de texto
+        
+        }
+    </script>
+
+</body>
+</html>
+        
+        
+        
+        
+                  
+    
+

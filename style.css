@@ -1,0 +1,38 @@
+.resolucion{
+width:  99%;
+text-align: center;
+}
+/*movil*/
+@media (min-width: 768px) {
+    
+    .desktope{display: none;}
+    .tablet{display: none;}
+    
+}
+/*tablet*/
+@media (min-width: 768px) and (max-width:768px) {
+    .desktope{display: none;}
+    
+    .movil{display: none;}
+}
+/*escritorio*/
+@media (min-width: 991px){
+    
+    .tablet{display: none;}
+    .movil{display: none;}
+} 
+
+
+
+.texto {
+    text-align: justify;
+}
+
+img {
+    width: 100%;
+    
+}
+iframe{
+    width: 100%;
+   
+}
